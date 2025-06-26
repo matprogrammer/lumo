@@ -1,0 +1,115 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  overflow: hidden;
+    height: calc(100vh - env(safe-area-inset-bottom));
+  overflow: hidden;
+  height: -webkit-fill-available;
+}
+
+.containerMobile {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  height: calc(100vh - env(safe-area-inset-bottom));
+  overflow: hidden;
+  height: -webkit-fill-available;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  width: 100%;
+}
+
+.lumoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: white;
+  width: 100%;
+  position: relative;
+}
+
+.lumoAvatar {
+  background-color: #cce4ff;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 1.5rem 0;
+  color: #2d3142;
+}
+
+.description {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  color: #4a4c5c;
+  margin-bottom: 3rem;
+}
+
+.button {
+  background-color: #cc94c3;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 1rem 2rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  text-decoration: none;
+  margin-bottom: 2rem;
+}
+
+.button:hover {
+  background-color: #b97fb3;
+}
+
+.anonymousMode {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #4a4c5c;
+  font-size: 1rem;
+}
+
+.anonymousMode input[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #d1d5db;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.anonymousMode input[type="checkbox"]:checked {
+  background-color: #7680dc;
+  border-color: #7680dc;
+  position: relative;
+}
+
+.anonymousMode input[type="checkbox"]:checked::after {
+  content: "✓";
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 12px;
+}

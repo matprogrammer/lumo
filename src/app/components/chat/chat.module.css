@@ -1,0 +1,168 @@
+.chatContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  background-color: #f5f7fa;
+  height: calc(100vh - env(safe-area-inset-bottom));
+  overflow: hidden;
+}
+
+.chatContainerMobile {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  height: calc(100vh - env(safe-area-inset-bottom));
+  overflow: hidden;
+  height: -webkit-fill-available;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background-color: white;
+  border-bottom: 1px solid #eaedf2;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.backButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+  color: #303342;
+}
+
+.menuButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 8px;
+}
+
+.dot {
+  height: 6px;
+  width: 6px;
+  background-color: #9ca3af;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 3px;
+}
+
+.dot:last-child {
+  margin-right: 0;
+}
+
+.messages {
+  flex-grow: 1;
+  padding: 16px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.message {
+  max-width: 80%;
+  padding: 16px 20px;
+  border-radius: 18px;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.userMessage {
+  align-self: flex-start;
+  background-color: #f0f1fa;
+  color: #2d3142;
+  border-top-left-radius: 4px;
+}
+
+.botMessage {
+  align-self: flex-end;
+  background-color: #7680dc;
+  color: white;
+  border-top-right-radius: 4px;
+}
+
+.inputArea {
+  display: flex;
+  position: relative;
+  padding: 16px;
+  gap: 10px;
+  background-color: white;
+  border-top: 1px solid #eaedf2;
+}
+
+.input {
+  flex-grow: 1;
+  padding: 12px 16px;
+  border: 1px solid #e2e5eb;
+  border-radius: 24px;
+  font-size: 16px;
+  outline: none;
+}
+
+.sendButton {
+  background-color: #7680dc;
+  color: white;
+  border: none;
+  border-radius: 24px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.sendButton:hover {
+  background-color: #6570c2;
+}
+
+/* ... Existing CSS ... */
+
+/* Add these new styles for the typing indicator */
+.typingIndicator {
+  padding: 8px 6px;
+  min-width: 40px;
+  max-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.typingDot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: white;
+  border-radius: 50%;
+  animation: typingBounce 1.4s infinite ease-in-out both;
+}
+
+.typingDot:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.typingDot:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+@keyframes typingBounce {
+  0%, 80%, 100% { 
+    transform: scale(0.6);
+  }
+  40% { 
+    transform: scale(1);
+  }
+}
